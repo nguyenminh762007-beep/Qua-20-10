@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff0f5">
+  <title>Gửi Mẹ và Em — 20/10 yêu thương</title>
+  <style>
+    :root { --pink:#f58ba8; --rose:#c7436b; --cream:#fff8f3; --ink:#573746; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0; color:var(--ink); font-family: "Segoe UI", system-ui, sans-serif;
+      background:linear-gradient(135deg,#fff7f2 0%,#ffeaf1 50%,#fff3e6 100%);
+      overflow-x:hidden;
+    }
+    .hearts { position:fixed; inset:0; pointer-events:none; overflow:hidden; z-index:0; }
+    .heart { position:absolute; bottom:-40px; color:#ee8ca8; opacity:.55; animation:floatUp linear infinite; }
+    @keyframes floatUp { to { transform:translateY(-115vh) rotate(25deg); opacity:0; } }
+    main { position:relative; z-index:1; }
+    .hero { min-height:100vh; display:grid; place-items:center; padding:48px 20px; text-align:center; }
+    .hero-card {
+      width:min(760px,100%); padding:clamp(28px,6vw,64px) clamp(20px,5vw,48px);
+      border:1px solid #ffffffc9; border-radius:32px; background:#ffffffb8;
+      box-shadow:0 24px 80px #b85d7820; backdrop-filter:blur(10px);
+    }
+    .eyebrow { letter-spacing:.18em; text-transform:uppercase; font-size:.78rem; color:var(--rose); font-weight:800; }
+    h1 { font-size:clamp(2.5rem,8vw,5.2rem); line-height:1.04; margin:18px 0; letter-spacing:-.05em; }
+    h1 span { color:var(--rose); }
+    .intro { max-width:560px; margin:0 auto; font-size:clamp(1rem,2.5vw,1.2rem); line-height:1.8; }
+    .flower { font-size:clamp(3rem,9vw,5rem); margin:14px 0; filter:drop-shadow(0 8px 8px #c7436b20); }
+    .btn {
+      display:inline-block; border:0; border-radius:999px; padding:14px 24px; margin:22px 7px 0;
+      font-size:1rem; font-weight:750; cursor:pointer; text-decoration:none; transition:.2s;
+    }
+    .btn-primary { background:var(--rose); color:white; box-shadow:0 8px 22px #c7436b35; }
+    .btn-secondary { background:white; color:var(--rose); border:1px solid #f3c3d0; }
+    .btn:hover { transform:translateY(-3px); }
+    section { padding:72px 20px; }
+    .section-inner { max-width:980px; margin:auto; }
+    .section-title { text-align:center; font-size:clamp(2rem,5vw,3rem); margin:0 0 14px; letter-spacing:-.04em; }
+    .section-sub { text-align:center; line-height:1.7; margin:0 auto 34px; max-width:620px; }
+    .cards { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; }
+    .card { padding:30px; border-radius:26px; background:#fffdfb; border:1px solid #f7dce4; box-shadow:0 14px 40px #9e526015; }
+    .card .emoji { font-size:2.7rem; }
+    .card h3 { font-size:1.6rem; margin:12px 0; color:var(--rose); }
+    .card p { line-height:1.85; margin:0; }
+    .note { background:#fff; border-radius:28px; padding:clamp(24px,5vw,46px); max-width:760px; margin:auto; box-shadow:0 14px 40px #9e526015; text-align:center; }
+    .note p { line-height:2; font-size:1.08rem; }
+    .signature { font-weight:800; color:var(--rose); font-size:1.15rem; }
+    .surprise { text-align:center; }
+    #surpriseMessage { display:none; margin:25px auto 0; max-width:650px; padding:25px; border-radius:22px; background:#fff; line-height:1.9; box-shadow:0 10px 30px #9e526015; }
+    footer { text-align:center; padding:35px 20px 50px; font-size:.92rem; color:#946b7b; }
+    .sparkle { display:inline-block; animation:twinkle 1.5s ease-in-out infinite alternate; }
+    @keyframes twinkle { to { transform:scale(1.2) rotate(12deg); } }
+    @media(max-width:650px) { .cards { grid-template-columns:1fr; } .hero-card { border-radius:24px; } }
+    @media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none!important; scroll-behavior:auto!important; } }
+  </style>
+</head>
+<body>
+  <div class="hearts" id="hearts" aria-hidden="true"></div>
+  <main>
+    <header class="hero">
+      <div class="hero-card">
+        <div class="eyebrow">20 tháng 10 · Ngày yêu thương</div>
+        <div class="flower">💐</div>
+        <h1>Tặng <span>Mẹ</span><br>& Em gái</h1>
+        <p class="intro">Một món quà nhỏ trên mạng, gửi đến hai người con thương nhất. Cảm ơn Mẹ và em vì đã làm cho nhà mình luôn đầy ắp yêu thương. 💗</p>
+        <a class="btn btn-primary" href="#loi-chuc">Đọc lời chúc ♡</a>
+        <a class="btn btn-secondary" href="#bat-mi">Có điều bất ngờ ✨</a>
+      </div>
+    </header>
+
+    <section id="loi-chuc">
+      <div class="section-inner">
+        <h2 class="section-title">Hai bông hoa của gia đình 🌷</h2>
+        <p class="section-sub">Mỗi người một cách đáng yêu, nhưng cả hai đều là những điều quý giá nhất trong lòng con/anh.</p>
+        <div class="cards">
+          <article class="card">
+            <div class="emoji">🌹</div>
+            <h3>Gửi Mẹ yêu</h3>
+            <p>Con chúc Mẹ ngày 20/10 thật vui vẻ, luôn mạnh khỏe, bình an và lúc nào cũng nở nụ cười. Cảm ơn Mẹ vì những yêu thương, sự chăm sóc và bao điều Mẹ âm thầm làm cho gia đình. Mong Mẹ luôn hạnh phúc — không chỉ hôm nay mà tất cả những ngày sau nữa. Con yêu Mẹ nhiều lắm!</p>
+          </article>
+          <article class="card">
+            <div class="emoji">🌼</div>
+            <h3>Gửi em gái</h3>
+            <p>Chúc em gái 20/10 vui như được quà, học tập thật tốt, luôn tự tin, khỏe mạnh và gặp thật nhiều điều dễ thương. Mong em luôn giữ nụ cười tươi, cứ là chính mình và nhớ rằng gia đình luôn yêu thương, ủng hộ em. Chúc cô em gái của anh/em lúc nào cũng vui vẻ nhé!</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-inner">
+        <div class="note">
+          <div class="flower">🫶</div>
+          <h2 class="section-title">Điều con muốn nói</h2>
+          <p>Có thể con không phải lúc nào cũng nói lời ngọt ngào, cũng chưa phải lúc nào cũng thể hiện được tình cảm của mình. Nhưng con luôn biết ơn vì có Mẹ bên cạnh, và thật vui vì có em gái trong gia đình. Mong hai người luôn khỏe mạnh, bình an và được yêu thương thật nhiều.</p>
+          <p class="signature">Chúc Mẹ và em gái một ngày 20/10 thật hạnh phúc! 💖</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="bat-mi">
+      <div class="section-inner surprise">
+        <h2 class="section-title">Một bí mật nho nhỏ <span class="sparkle">✨</span></h2>
+        <p class="section-sub">Nhấn vào chiếc hộp nhé, có lời nhắn dành riêng cho hai người!</p>
+        <button class="btn btn-primary" id="revealBtn" type="button">🎁 Mở món quà</button>
+        <div id="surpriseMessage" role="status">
+          <div style="font-size:2.5rem">💌</div>
+          <strong>Mẹ và em gái ơi,</strong><br>
+          Đây không phải món quà đắt tiền, nhưng được làm bằng tất cả tình yêu của con/anh. Khi nào mệt thì nhớ nghỉ ngơi, khi nào buồn thì cứ chia sẻ, và đừng quên rằng hai người luôn có con/anh ở đây. Yêu thương thật nhiều! 💕
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>Made with ♡ dành tặng Mẹ và em gái · 20/10</footer>
+  <script>
+    const hearts = document.getElementById('hearts');
+    const symbols = ['♡', '♥', '✿', '✧'];
+    for (let i = 0; i < 22; i++) {
+      const el = document.createElement('span');
+      el.className = 'heart';
+      el.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+      el.style.left = Math.random() * 100 + '%';
+      el.style.fontSize = (14 + Math.random() * 22) + 'px';
+      el.style.animationDuration = (9 + Math.random() * 13) + 's';
+      el.style.animationDelay = (-Math.random() * 20) + 's';
+      hearts.appendChild(el);
+    }
+    const button = document.getElementById('revealBtn');
+    const message = document.getElementById('surpriseMessage');
+    button.addEventListener('click', () => {
+      const opening = message.style.display !== 'block';
+      message.style.display = opening ? 'block' : 'none';
+      button.textContent = opening ? '💗 Đóng lời nhắn' : '🎁 Mở món quà';
+    });
+  </script>
+</body>
+</html>
